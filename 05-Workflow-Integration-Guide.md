@@ -130,5 +130,3 @@
 This guide ensures AI is not just “bolted on” to development, but systematically integrated. It creates a **trustworthy workflow**: AI accelerates safe tasks, humans guard dangerous ones, and the protocols + audits + postmortems ensure accountability.
 
 ---
-
-👉 Would you like me to also generate this as a **Markdown file (`ai-workflow-integration-guide.md`)** so you can keep it aligned in your Obsidian vault alongside the other four?

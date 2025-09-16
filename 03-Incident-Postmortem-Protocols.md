@@ -123,8 +123,7 @@
 ---
 
 ⚡ **Outcome:** This document closes the loop.  
-Your **Intro** explains _why_, your **Protocols** define _rules_, your **Self-Audit** enforces _checks inside AI_, and your **Postmortem Protocols** ensure _continuous learning from failures_.
+**Intro** explains _why_, **Protocols** define _rules_, **Self-Audit** enforces _checks inside AI_, and **Postmortem Protocols** ensure _continuous learning from failures_.
 
 ---
 
-👉 Do you want me to also generate this as a **Markdown file (`incident-postmortem-protocols.md`)** so it can live alongside your other three in Obsidian?

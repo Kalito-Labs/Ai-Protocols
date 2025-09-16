@@ -140,5 +140,3 @@ This catalog documents **failure modes, biases, and cognitive shortcuts** that A
 This catalog turns vague “AI hallucination” or “bluffing” into **named, trackable traps**. Coupled with **Incident Postmortems**, it creates a feedback loop: incidents feed into the catalog → catalog informs new rules → rules reduce future incidents.
 
 ---
-
-👉 Do you want me to also generate this as a **Markdown file (`bias-cognitive-trap-catalog.md`)** so it sits alongside your other four in Obsidian?
