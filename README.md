@@ -1,56 +1,76 @@
-# AI Protocols & Developer Guardrails
+# AI Protocols & Developer Guar* **05 – Workflow Integration Gu## 🚀 Usage
 
-This repository is a structured framework for **safe, reliable, and verifiable AI-assisted software development**.
+**Quick Start:** Clone, fork, and drop them into your workflow.
 
-It contains constitutions, protocols, and reference guides designed to counteract common AI failure modes such as hallucination, omission of safeguards, and overconfidence bias.
+**Daily Usage:**
+- **Light guardrails:** Use just the Self-Audit Questions
+- **Strict compliance:** Load the full AI Protocols constitution
+- **At task start:** "Analyze the AI Protocols before we get started"
+- **At task end:** "Re-run your AI Protocols to make sure you didn't lie, cheat, or omit data"
+
+**When to Use Each Protocol:**
+1. **01 + 02** - Default for all code changes
+2. **03** - When AI suggestions cause failures or regressions  
+3. **04** - When reasoning feels too certain or too easy
+4. **05** - During PR reviews, merges, or codebase-wide changes  Maps everything to real dev work (safe zones, danger zones, checkpoints).
+
+* **copilot-instructions**  
+  Lightweight map file that gives Copilot an overview and tells it when to reference each protocol.ails
+
+A set of drop-in AI Protocols for coding. Think of them as a **constitution for your copilot/LLM**: rules, self-audit checklists, and postmortem templates that force the model to slow down, verify, and admit uncertainty.
+
+## How It Works
+
+- **At the start of a task:** Tell your model "Analyze the AI Protocols before we get started."
+- **During the task:** Checkpoints catch bias, shortcuts, or omissions.
+- **At the end:** "Re-run your AI Protocols to make sure you didn't lie, cheat, or omit data."
+
+You can run just the Self-Audit Questions if you want light guardrails, or load the whole constitution for strict compliance.
 
 ---
 
-## 📂 Repository Structure
+## 📂 What's Inside
 
-* **00-The Why.md**  
-  High-level rationale for creating AI protocols. Explains how current AI systems optimize for fluency over truth and why strict guardrails are required.
+* **00 – The Why**  
+  Explains how AI models are optimized for sounding good, not being right.
 
-* **01-Ai-Protocols.md**  
-  The core constitution of rules for AI copilots. Defines mandatory verification, forbidden shortcuts, tool priorities, and quality mandates.
+* **01 – AI Protocols**  
+  Core constitution (forbidden patterns, tool priority, reality checks).
 
-* **02-Self-Audit-Questions.md**  
-  A checklist of mandatory self-audit questions AI must ask before output. Covers truth verification, dependency analysis, test validation, and manipulation detection.
+* **02 – Self-Audit Questions**  
+  Truth checks, dependency scans, test verification, file ops.
 
-* **03-Incident-Postmortem-Protocols.md**  
-  Templates and rules for handling protocol violations. Defines incident triggers, postmortem format, and continuous improvement loop.
+* **03 – Incident Postmortems**  
+  Log and classify failures (hallucination, omission, bluffing, etc.).
 
-* **04-Bias-Cognitive-Trap-Catalog.md**  
-  A catalog of common AI failure modes (hallucination, omission, shortcuts, overconfidence, duplication, outdated patterns, etc.) with mitigations.
+* **04 – Bias Catalog**  
+  Makes invisible traps visible — overconfidence, shortcutting, duplication.
 
 * **05-Workflow-Integration-Guide.md**  
   Practical developer workflow guide for integrating AI copilots safely. Defines “safe zones,” “danger zones,” checkpoints, and roles/responsibilities.
 
 ---
 
-## 🗂 Recommended Storage Layout
+## 🗂 Recommended Layout
 
-To use these protocols effectively inside your projects, store them like this:
-
-```
-
-your-project/  
-.vscode/  
-copilot-instructions.md # lightweight overview for Copilot, auto-loaded  
-docs/  
-ai/  
-00-the-why.md  
-01-ai-protocols.md  
-02-self-audit-questions.md  
-03-incident-postmortem-protocols.md  
-04-bias-cognitive-trap-catalog.md  
-05-workflow-integration-guide.md
+Here's the layout I recommend (this is how I use them myself):
 
 ```
+your-repo/
+  .vscode/
+    copilot-instructions.md   # auto-loaded overview (tells Copilot which doc to use when)
+  docs/
+    ai/
+      01-ai-protocols.md
+      02-self-audit-questions.md
+      03-incident-postmortem-protocols.md
+      04-bias-cognitive-trap-catalog.md
+      05-workflow-integration-guide.md
+```
 
-- Place the **five core documents** under `/docs/ai/`.  
-- Keep the **`.vscode/copilot-instructions.md`** file short — it introduces the five docs, explains their triggers, and tells Copilot when to consult them.  
-- This keeps your context lean: Copilot always loads the intro, and only pulls in the full protocols when a trigger applies.
+The lightweight map file (`.vscode/copilot-instructions.md`) gives Copilot an overview and tells it when to reference each protocol.
+
+This way, you're not loading all five docs every time (avoids token bloat), but the AI knows they exist and when to pull them in.
 
 ---
 
