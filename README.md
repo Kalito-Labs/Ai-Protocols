@@ -1,10 +1,4 @@
-# AI Protocols & Develope* **05-Workflow-Integration-Guide.md**  
-  Practical developer workflow guide for integrating AI copilots safely. Defines "safe zones," "danger zones," checkpoints, and roles/responsibilities.
-
-* **copilot-instructions**  
-  Lightweight map file that gives Copilot an overview and tells it when to reference each protocol.
-
----ardrails
+# AI Protocols & Developer Guardrails
 
 This repository is a structured framework for **safe, reliable, and verifiable AI-assisted software development**.
 
@@ -31,6 +25,9 @@ It contains constitutions, protocols, and reference guides designed to counterac
 
 * **05-Workflow-Integration-Guide.md**  
   Practical developer workflow guide for integrating AI copilots safely. Defines “safe zones,” “danger zones,” checkpoints, and roles/responsibilities.
+
+* **copilot-instructions**  
+  Lightweight map file that gives Copilot an overview and tells it when to reference each protocol.
 
 ---
 

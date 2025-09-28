@@ -1,0 +1,34 @@
+# Copilot Instructions – AI Protocol Guardrails
+
+This project uses five AI Protocol documents to keep code generation safe, accurate, and auditable.  **Do not load all five at once.** Instead, check whether the current task matches a trigger. If yes, open the relevant doc from `/docs/ai/` and apply it fully.  
+
+---
+## Protocol Map
+
+1. **01-AI Protocols.md**  
+   Core constitution of do’s and don’ts: forbidden patterns, tool priorities, and reality checks.  
+   *Trigger:* Whenever **writing, editing, or deleting code**.
+
+2. **02-Self-Audit-Questions.md**  
+   Checklist for truth verification, dependency analysis, test coverage, and file operations.  
+   *Trigger:* Whenever **making claims about correctness, dependencies, tests, or deletions**.
+
+3. **03-Incident-Postmortem-Protocols.md**  
+   How to capture, analyze, and prevent failures caused by AI-generated changes.  
+   *Trigger:* Whenever an **AI suggestion causes a failure, regresssion or outage**.
+
+4. **04-Bias-Cognitive-Trap-Catalog.md**  
+   Catalog of cognitive traps: fluency bias, illusion of correctness, satisficing, etc.  
+   *Trigger:* Whenever reasoning feels **too certain, too fluent, or too easy** without evidence.
+
+5. **05-Workflow-Integration-Guide.md**  
+   Defines safe vs danger zones, verification gates, and checkpoints in the dev cycle.  
+   *Trigger:* During **PR reviews, merges, or codebase-wide changes**.
+---
+## Usage Rules
+
+- **Default:** Always start with **01** + **02** for code changes.  
+- **Escalation:** Pull in **03–05** only when their triggers apply.  
+- **Obligation:** Never ignore a trigger. If active, read the file and enforce its rules.  
+
+---
